@@ -20,6 +20,7 @@ export default defineConfig({
     resolve: {
         alias: {
             '@config': '/resources/js/Config',
+            '@helper': '/resources/js/Helpers',
         }
     }
 });

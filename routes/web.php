@@ -5,6 +5,8 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\PostController;
+use App\Http\Resources\ImageResource;
+use App\Models\Image;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,3 +41,8 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 require __DIR__.'/wysiwyg.php';
+
+
+Route::get('/test', function() {
+    return ImageResource::collection(Image::all());
+});
